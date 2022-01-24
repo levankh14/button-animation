@@ -45,6 +45,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <TouchableOpacity
+      activeOpacity={1}
         onPress={() => {
           if (text === 0) {
             addFavoritesValue.value = withSpring(20, {}, () => {
@@ -58,7 +59,7 @@ export default function App() {
             cartValue.value = withSpring(-30);
             addFavoritesOpacityValue.value = withTiming(1);
             setText(1);
-          } else if (text === 2) {
+          } else  {
             addFavoritesValue.value = 1;
             cartValue.value = -200;
             thirdOpacityValue.value = 0;
